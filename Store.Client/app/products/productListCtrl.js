@@ -9,7 +9,9 @@
     function ProductListCtrl(productResource) {
         var vm = this;
 
-        productResource.query(
+        vm.searchCritetia = "GDN";
+
+        productResource.query({ $filter: "substringof('GDN',ProductCode) eq true", $orderby: "Price desc" },
             function (data) {
                 vm.products = data;
             });
