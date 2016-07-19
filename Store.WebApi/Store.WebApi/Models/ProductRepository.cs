@@ -96,6 +96,5 @@ namespace Store.WebApi.Models
 
             return true;
         }
-
     }
 }
